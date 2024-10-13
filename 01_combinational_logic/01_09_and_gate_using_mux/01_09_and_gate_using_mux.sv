@@ -19,7 +19,7 @@ endmodule
 
 module and_gate_using_mux
 (
-    input  a,
+    input  a, 
     input  b,
     output o
 );
@@ -27,6 +27,12 @@ module and_gate_using_mux
   // Task:
   // Implement and gate using instance(s) of mux,
   // constants 0 and 1, and wire connections
+  mux and_gate(
+    .d0 (0),
+    .d1 (b),
+    .sel (a), 
+    .y (o)
+  );
 
 
 endmodule
